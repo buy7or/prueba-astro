@@ -1,0 +1,36 @@
+---
+import Card from "./Card.astro";
+
+const launches = [
+  {
+    name: "Falcon 1",
+    description: "El primer cohete de SpaceX que alcanzó la órbita en 2008.",
+    src: "/images/imagen.png"
+  },
+  {
+    name: "Falcon 9",
+    description: "El cohete reutilizable de SpaceX, utilizado para misiones comerciales y de la NASA.",
+    src: "/images/imagen.png"
+  },
+  {
+    name: "Starship",
+    description: "El vehículo espacial de próxima generación de SpaceX, diseñado para misiones a Marte.",
+    src: "/images/imagen.png"
+  },
+  {
+    name: "New Shepard",
+    description: "El cohete suborbital de Blue Origin, utilizado para vuelos espaciales turísticos.",
+    src: "/images/imagen.png"
+  }
+];
+---
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {
+        launches.map(
+            (launch)=><Card
+            name={launch.name}
+            img={launch.src}
+            />
+        )
+    }
+</div>
